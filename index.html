@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Hairline&display=swap" rel="stylesheet">
+
+    <title>Covid Dashbaord</title>
+  </head>
+  <body>
+
+    <main class="container-fluid">
+        <div class="row">
+            <div class="col-12 col-md-4 col-lg-3 p-3 pe-5 sidebar">
+                <p class="h2"><i class="fas fa-virus"></i> Sidebar</p>
+                <hr>
+                <ul class="sidebar-list">
+                    <a href="#totals"><li class="mb-2 px-2 sidebar-li">Totals</li></a>
+                    <a href="#regions"><li class="mb-2 px-2 sidebar-li">Regions</li></a>
+                </ul>
+            </div>
+            <div class="col-12 col-md-8 col-lg-9 p-3 pe-5 mainbar">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="title h2">Covid Dashboard</h1>
+                        <hr>
+                    </div>
+                    <div class="col-12 main-col p-3 px-5">
+                        <p id="totals" class="h3 mb-5">Data updated at: <span id="data"></span></p>
+                        
+                        <div class="row">
+                            <div class="col-12 col-lg-4 d-flex flex-column justify-content-between mb-5"> 
+                                    <p id="totalCases"></p>
+                                    <p id="totalHealed"></p>
+                                    <p id="totalDead"></p>
+                                    <p id="totalPositives"></p>
+                            </div>
+                            <div class="col-12 col-lg-8">
+                                <video class="img-fluid mx-auto mb-5" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                                    <source src="./media/corona_video.mp4" type="video/mp4">
+                                </video>
+                            </div>
+                        </div>
+
+                        <p id="regions" class="h3 mb-5">Regions</p>
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <ol id="regionWrapper"></ol>
+                            </div>
+                            <div class="col-12 col-lg-6 d-flex justify-content-center align-items-center">
+                                <img class="img-fluid syringe" src="./media/syringe.png" alt="syringe">
+                            </div>
+                        </div>
+
+                        <div class="row mt-5 d-none d-lg-flex">
+                            <div class="col-12">
+                                <p>Lombardia's New Cases Trend</p>
+                                <div id="trendNew" class="d-flex align-items-end border-custom" style="height: 400px;"></div>
+                                <small>From Febraury 2020</small>
+                            </div>
+                        </div>
+ 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7aab9dc3ab.js" crossorigin="anonymous"></script>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
